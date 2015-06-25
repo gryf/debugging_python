@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="524.40942"
+   height="320"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="title.pdf">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="667.43148"
+     inkscape:cy="356.28175"
+     inkscape:document-units="px"
+     inkscape:current-layer="g6506"
+     showgrid="false"
+     inkscape:window-width="1854"
+     inkscape:window-height="1105"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     height="330px" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-732.36218)">
+    <g
+       id="g6506"
+       transform="matrix(0.84701236,0,0,0.84701236,-176.33611,456.98903)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text2985"
+         y="457.58533"
+         x="223.48434"
+         style="font-size:132.84773254px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#14396b;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Sans"
+         xml:space="preserve"><tspan
+           y="457.58533"
+           x="223.48434"
+           id="tspan2987"
+           sodipodi:role="line">debugging</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+         x="94.954338"
+         y="-337.60931"
+         id="text6662"
+         sodipodi:linespacing="125%"
+         transform="matrix(1.1806203,0,0,1.1806203,208.18599,325.11114)"><tspan
+           sodipodi:role="line"
+           id="tspan6664"
+           x="94.954338"
+           y="-337.60931"
+           style="font-weight:bold;-inkscape-font-specification:Impact Bold" /></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text2985-6"
+         y="652.70618"
+         x="219.43829"
+         style="font-size:208.4336853px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#14396b;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Sans"
+         xml:space="preserve"><tspan
+           y="652.70618"
+           x="219.43829"
+           id="tspan2987-0"
+           sodipodi:role="line">python</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Sans"
+       x="496.99506"
+       y="475.39392"
+       id="text3031"
+       sodipodi:linespacing="125%"
+       transform="translate(0,308.2677)"><tspan
+         sodipodi:role="line"
+         id="tspan3033"
+         x="496.99506"
+         y="475.39392" /></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5990"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Inconsolata-g;-inkscape-font-specification:Inconsolata-g Medium"><flowRegion
+         id="flowRegion5992"><rect
+           id="rect5994"
+           width="680.84283"
+           height="398.00009"
+           x="183.84776"
+           y="53.150143" /></flowRegion><flowPara
+         id="flowPara5996"></flowPara></flowRoot>  </g>
+</svg>

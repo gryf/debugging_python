@@ -1,0 +1,202 @@
+% Python debugging
+% by Roman gryf Dobosz 2015
+
+\documentclass[14pt,notes,svgnames,aspectratio=1610]{beamer}
+% \documentclass[14pt,notes,svgnames]{beamer}
+
+\usecolortheme{seagull}
+
+\usecolortheme[RGB={23,57,107}]{structure}
+\usenavigationsymbolstemplate{}  % Gets rid of slide navigation symbols
+\usefonttheme{professionalfonts} % using non standard fonts for beamer
+
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+
+% color and font customization
+\definecolor{ExecusharesEmph}{RGB}{20,57,107}
+\definecolor{ExecusharesBlack}{RGB}{47,42,42}
+\definecolor{ExecusharesWhite}{RGB}{211,205,193}
+\definecolor{ExecusharesGrey}{RGB}{96,83,58}
+
+\setmainfont{Helvetica Neue}
+\setsansfont{Helvetica Neue}
+\setmonofont{DejaVu Sans Mono}
+
+\setbeamercolor{itemize item}{fg=ExecusharesEmph}
+\setbeamercolor{enumerate item}{fg=ExecusharesEmph}
+\setbeamercolor{alerted text}{fg=ExecusharesEmph}
+\setbeamercolor{section in toc}{fg=ExecusharesBlack}
+
+\setbeamercolor{background canvas}{bg=ExecusharesWhite}
+\setbeamercolor{normal text}{fg=ExecusharesEmph}
+
+\setbeamerfont{author}{size*={14}{1.4em}}
+\setbeamerfont{date}{size*={7}{0.7em}}
+
+\useinnertheme{circles}
+
+\usepackage{graphicx}
+\usepackage{sidecap}
+% \usepackage{courier}
+\usepackage{hyperref}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{listings}
+
+
+\definecolor{ListingsKeywords}{RGB}{107,81,42}
+\definecolor{ListingsComments}{RGB}{20,56,107}
+\definecolor{ListingsStrings}{RGB}{90,20,107}
+\definecolor{ListingsIdentifiers}{RGB}{39,107,20}
+
+\lstset{language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{ListingsKeywords},
+    commentstyle=\color{ListingsComments},
+    stringstyle=\color{ListingsStrings},
+    showstringspaces=false,
+    identifierstyle=\color{ListingsIdentifiers}
+}
+
+% \usepackage{fontspec}
+% \setmainfont[Mapping=tex-text]{Helvetica Neue UltraLight}
+\usepackage{fontspec}
+\setsansfont{Arial}
+% \let\sfdefault\rmdefault
+
+
+\setbeamerfont{framesubtitle}{family=\fontfamily{hvt}\selectfont}
+
+\setbeamerfont{frametitle}{series=\bfseries}
+
+\setbeamertemplate{frametitle}{%
+    \begin{centering}
+        \textbf{\insertframetitle}
+        \par
+    \end{centering}
+}
+
+\setbeamertemplate{custom section}
+{% 
+    \begin{centering}
+        \usebeamerfont{section title}
+        \Large\bfseries
+        {\color{ExecusharesWhite}\insertsection\par}
+    \end{centering}
+}
+\def\sectionpage{\usebeamertemplate*{custom section}}
+
+\defbeamertemplate*{title page}{customized}[1][]
+{%
+    \center
+    \usebeamerfont{title}\inserttitle\par
+    \bigskip
+    {\color{ExecusharesEmph} \usebeamerfont{author}\insertauthor\par}
+    \usebeamerfont{institute}\insertinstitute\par
+    \bigskip
+    \usebeamerfont{date}\insertdate\par
+}
+
+\AtBeginSection{\frame{\sectionpage}}
+
+\begin{document}
+
+% \title{\Huge{\textbf{Debugging Python}}}
+% \titlegraphic{\includegraphics[width=\textwidth]{images/title.pdf}}
+\title{%
+    \includegraphics[width=7cm]{images/title.pdf}
+}
+\author{Roman Dobosz}
+\date{PyGDA, 29 June, 2015}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begingroup
+    \setbeamercolor{background canvas}{bg=ExecusharesBlack}
+    \section{Agenda}
+\endgroup
+
+\begin{frame}
+    \begin{columns}
+        \column{.4\textwidth}
+        \begin{itemize}[<+->]
+            \item<1,2,3> Failure detection
+            \item<2,3> Python debuggers
+            \item<3> \lstinline{pdb} in practice
+        \end{itemize}
+        \column{.4\textwidth}
+        \centering
+        \only<1>{\begin{figure}[!htbp]
+                \includegraphics[width=3cm]{"images/find_bug.png"}
+            \end{figure}
+        }
+        \only<2>{\begin{figure}[!htbp]
+                \includegraphics[width=3cm]{images/debugs.png}
+            \end{figure}
+        }
+        \only<3>{\begin{figure}[!htbp]
+                \includegraphics[width=3cm]{images/pdb.png}
+            \end{figure}
+        }
+    \end{columns}
+
+\end{frame}
+
+\begingroup
+    \setbeamercolor{background canvas}{bg=ExecusharesBlack}
+    \section{How to find the place of a failure}
+\endgroup
+
+\begin{frame}
+    \begin{itemize}
+        \item{traceback (obviously)}
+        \pause
+        \item \lstinline{print} statement
+        \pause
+        \item log
+        \pause
+        \item trace
+        \pause
+        \item debugger
+    \end{itemize}
+\end{frame}
+
+\begingroup
+    \setbeamercolor{background canvas}{bg=ExecusharesBlack}
+    \section{Python debuggers}
+\endgroup
+
+\begin{frame}
+    \begin{columns}
+        \column{.4\textwidth}
+        TBD
+        \column{.4\textwidth}
+    \end{columns}
+\end{frame}
+
+\begingroup
+    \setbeamercolor{background canvas}{bg=ExecusharesBlack}
+    \section{Python debugger - pdb}
+\endgroup
+
+\begin{frame}
+    \centerline{\Large Let see it in action!}
+\end{frame}
+
+\begingroup
+    \setbeamercolor{background canvas}{bg=ExecusharesBlack}
+    \section{Questions?}
+\endgroup
+
+\begin{frame}
+    \centerline{\Large Thank you!}
+\end{frame}
+
+\end{document}
