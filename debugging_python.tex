@@ -1,9 +1,9 @@
 % Python debugging
 % by Roman gryf Dobosz 2015
 
-\documentclass[14pt,notes,svgnames,aspectratio=1610]{beamer}
+% \documentclass[14pt,notes,svgnames,aspectratio=1610]{beamer}
+\documentclass[14pt,notes,svgnames,aspectratio=169]{beamer}
 % \documentclass[14pt,notes,svgnames]{beamer}
-
 \usecolortheme{seagull}
 
 \usecolortheme[RGB={23,57,107}]{structure}
@@ -38,13 +38,9 @@
 \useinnertheme{circles}
 
 \usepackage{graphicx}
-\usepackage{sidecap}
-% \usepackage{courier}
+% \usepackage{sidecap}
 \usepackage{hyperref}
 
-
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
 
 \usepackage{listings}
 
@@ -62,13 +58,6 @@
     showstringspaces=false,
     identifierstyle=\color{ListingsIdentifiers}
 }
-
-% \usepackage{fontspec}
-% \setmainfont[Mapping=tex-text]{Helvetica Neue UltraLight}
-\usepackage{fontspec}
-\setsansfont{Arial}
-% \let\sfdefault\rmdefault
-
 
 \setbeamerfont{framesubtitle}{family=\fontfamily{hvt}\selectfont}
 
@@ -106,8 +95,6 @@
 
 \begin{document}
 
-% \title{\Huge{\textbf{Debugging Python}}}
-% \titlegraphic{\includegraphics[width=\textwidth]{images/title.pdf}}
 \title{%
     \includegraphics[width=7cm]{images/title.pdf}
 }
@@ -125,7 +112,7 @@
 
 \begin{frame}
     \begin{columns}
-        \column{.4\textwidth}
+        \column{.5\textwidth}
         \begin{itemize}[<+->]
             \item<1,2,3> Failure detection
             \item<2,3> Python debuggers
@@ -138,7 +125,7 @@
             \end{figure}
         }
         \only<2>{\begin{figure}[!htbp]
-                \includegraphics[width=3cm]{images/debugs.png}
+                \includegraphics[width=3cm]{images/debugs2.png}
             \end{figure}
         }
         \only<3>{\begin{figure}[!htbp]
@@ -146,7 +133,6 @@
             \end{figure}
         }
     \end{columns}
-
 \end{frame}
 
 \begingroup
@@ -160,9 +146,9 @@
         \pause
         \item \lstinline{print} statement
         \pause
-        \item log
+        \item module \lstinline{logging}
         \pause
-        \item trace
+        \item module \lstinline{trace}
         \pause
         \item debugger
     \end{itemize}
@@ -175,7 +161,7 @@
 
 \begin{frame}
     \begin{columns}
-        \column{.4\textwidth}
+        \column{.5\textwidth}
         TBD
         \column{.4\textwidth}
     \end{columns}

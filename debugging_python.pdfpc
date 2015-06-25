@@ -1,0 +1,35 @@
+[file]
+debugging_python.pdf
+[end_user_slide]
+7
+[notes]
+### 1
+### 3
+· Na początek przybliżę sposoby wykrycia błędów w programach pythonowych
+
+· Poruszę kwestię dostępnego oprogramowania do odpluskwiania
+
+· I w ostatniej części zaprezentuję przykładową sesję z debuggerem pdb
+### 5
+· W przypadku gdy program zakończy się niepowodzeniem, jest spora szansa że wystąpi wyjątek:
+    np TypeError, IndexError, czy AttributeError
+
+    wynikiem tego jest traceback. Dzięki czemu jesteśmy w stanie stosunkowo prosto namierzyć miejsce w kodzie w którym nastąpił wyjątek
+
+· Jest to jeden z najprostszych sposobów na pokazanie wartości zmiennych w działającym nieprawidłowo programie, który nie rzuca wyjątkami. Jednocześnie jest on jednym z powszechniejszych wśród wszystkich języków programowania.
+asd
+·
+·
+·
+·
+·
+·
+·
+·
+·
+### 7
+
+### 8
+
+### 9
+moduł logging który dostarcza funkcjonalność logowania jest rozwinięciem powyższej metody - oprócz możliwości wypisywania informacji na ekran (konsolę) pozwala zdefiniować inne sposoby przesłania informacji o zdarzeniu - od wspomnianego wcześniej wypisywania na konsolę, po zapis do pliku lub wysłaniu do sysloga, a nawet do pokuszenia się o napisanie własnej obsługi 
