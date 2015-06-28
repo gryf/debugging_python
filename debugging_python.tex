@@ -1,9 +1,9 @@
 % Python debugging
 % by Roman gryf Dobosz 2015
 
+% \documentclass[14pt,notes,svgnames]{beamer}
 % \documentclass[14pt,notes,svgnames,aspectratio=1610]{beamer}
 \documentclass[14pt,notes,svgnames,aspectratio=169]{beamer}
-% \documentclass[14pt,notes,svgnames]{beamer}
 \usecolortheme{seagull}
 
 \usecolortheme[RGB={23,57,107}]{structure}
@@ -145,24 +145,34 @@
         \column{.4\textwidth}
         \centering
         \only<1>{%
+
             \vspace*{0cm}
             \hspace*{0cm}\includegraphics[width=5cm]{images/traceback.png}
+
         }
         \only<2>{%
+
             \vspace*{0cm}
             \hspace*{0cm}\includegraphics[width=5cm]{images/print.png}
+
         }
         \only<3>{%
+
             \vspace*{0cm}
             \hspace*{0cm}\includegraphics[width=5cm]{images/logging.png}
+
         }
         \only<4>{%
+
             \vspace*{0cm}
             \hspace*{0cm}\includegraphics[width=5cm]{images/trace.png}
+
         }
         \only<5>{%
+
             \vspace*{0cm}
             \hspace*{0cm}\includegraphics[width=5cm]{images/pudb.png}
+
         }
     \end{columns}
 \end{frame}
@@ -189,7 +199,7 @@
 \begin{frame}
     \frametitle{Debuggers - text based}
     \begin{columns}
-        \column{.4\textwidth}
+        \column{.5\textwidth}
         \begin{itemize}
             \item \lstinline{pdb}
             \item \lstinline{ipdb}
@@ -197,7 +207,7 @@
             \item \lstinline{pudb}
             \item \color{blue}\href{https://wiki.python.org/moin/PythonDebuggingTools}{\uline{others}}
         \end{itemize}
-        \column{.5\textwidth}
+        \column{.4\textwidth}
 
         \vspace*{0cm}
         \hspace*{0cm}\includegraphics[width=5cm]{"images/ipdb.png"}
@@ -208,12 +218,12 @@
 \begin{frame}
     \frametitle{Debuggers - graphical}
     \begin{columns}
-        \column{.4\textwidth}
+        \column{.5\textwidth}
         \begin{itemize}
             \item Winpdb
             \item \lstinline{pywin.debugger}
         \end{itemize}
-        \column{.5\textwidth}
+        \column{.4\textwidth}
 
         \vspace*{0cm}
         \hspace*{0cm}\includegraphics[width=5cm]{"images/winpdb.png"}
@@ -224,7 +234,7 @@
 \begin{frame}
     \frametitle{Debuggers - IDE}
     \begin{columns}
-        \column{.4\textwidth}
+        \column{.5\textwidth}
         \begin{itemize}
             \item PyCharm
             \item PyDev (Eclipse)
@@ -232,7 +242,7 @@
             \item Visual Studio
             \item \color{blue}\href{https://wiki.python.org/moin/IntegratedDevelopmentEnvironments}{\uline{others!}}
         \end{itemize}
-        \column{.5\textwidth}
+        \column{.4\textwidth}
 
         \vspace*{0cm}
         \hspace*{0cm}\includegraphics[width=5cm]{"images/pycharm.png"}
