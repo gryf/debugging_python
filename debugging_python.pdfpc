@@ -11,25 +11,19 @@ debugging_python.pdf
 
 · I w ostatniej części zaprezentuję przykładową sesję z debuggerem pdb
 ### 5
-· W przypadku gdy program zakończy się niepowodzeniem, jest spora szansa że wystąpi wyjątek:
-    np TypeError, IndexError, czy AttributeError
+· W przypadku gdy program zakończy się niepowodzeniem, jest spora szansa że wystąpi wyjątek
+    - TypeError, IndexError, czy AttributeError
 
-    wynikiem tego jest traceback. Dzięki czemu jesteśmy w stanie stosunkowo prosto namierzyć miejsce w kodzie w którym nastąpił wyjątek
+  wynikiem tego jest traceback. Dzięki czemu jesteśmy w stanie stosunkowo prosto namierzyć miejsce w kodzie w którym nastąpił wyjątek.
 
-· Jest to jeden z najprostszych sposobów na pokazanie wartości zmiennych w działającym nieprawidłowo programie, który nie rzuca wyjątkami. Jednocześnie jest on jednym z powszechniejszych wśród wszystkich języków programowania.
-asd
-·
-·
-·
-·
-·
-·
-·
-·
-·
+· Wykorzystanie instrukcji print jest jednym z najprostszych sposobów na pokazanie wartości zmiennych w działającym (nieprawidłowo) programie, w przypadku gdy wykonanie programu nie kończy się rzuceniem wyjątku. Technika wypisywania na ekran informacji o stanie programu jest jedną z powszechniej stosowanych technik niezależnie od języka programowania.
+
+· moduł logging który dostarcza funkcjonalność logowania jest rozwinięciem powyższej metody - oprócz możliwości wypisywania informacji na ekran (konsolę) pozwala zdefiniować inne sposoby przesłania informacji o zdarzeniu - od wspomnianego wcześniej wypisywania na konsolę, po zapis do pliku lub wysłaniu do sysloga, a nawet do pokuszenia się o napisanie własnej obsługi 
+· moduł trace pozwala na sprawdzenie w jaki sposób przebiegło wykonanie naszego programu co pomoże w ustaleniu w którym miejscu coś poszło nie tak
+· no i debugger - czyli program pozwalający na krokowe wykonanie programu, podglądu wartości zmiennych w danej chwili, zatrzymywaniem się we wskazywanych przez użytkownika miejscach, introspekcji (czasami)
 ### 7
 
 ### 8
 
 ### 9
-moduł logging który dostarcza funkcjonalność logowania jest rozwinięciem powyższej metody - oprócz możliwości wypisywania informacji na ekran (konsolę) pozwala zdefiniować inne sposoby przesłania informacji o zdarzeniu - od wspomnianego wcześniej wypisywania na konsolę, po zapis do pliku lub wysłaniu do sysloga, a nawet do pokuszenia się o napisanie własnej obsługi 
+

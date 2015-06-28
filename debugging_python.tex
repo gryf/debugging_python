@@ -10,6 +10,8 @@
 \usenavigationsymbolstemplate{}  % Gets rid of slide navigation symbols
 \usefonttheme{professionalfonts} % using non standard fonts for beamer
 
+% for proper underline
+\usepackage[normalem]{ulem}
 
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
@@ -39,8 +41,7 @@
 
 \usepackage{graphicx}
 % \usepackage{sidecap}
-\usepackage{hyperref}
-
+% \usepackage{hyperref}
 
 \usepackage{listings}
 
@@ -125,7 +126,7 @@
             \end{figure}
         }
         \only<2>{\begin{figure}[!htbp]
-                \includegraphics[width=3cm]{images/debugs2.png}
+                \includegraphics[width=3cm]{images/debugs.png}
             \end{figure}
         }
         \only<3>{\begin{figure}[!htbp]
@@ -160,10 +161,59 @@
 \endgroup
 
 \begin{frame}
+    Debuggers can be divided in several different aspects
+
     \begin{columns}
         \column{.5\textwidth}
-        TBD
+        \begin{itemize}[<+->]
+            \item<1,2,3> Text based 
+            \item<2,3> Graphical
+            \item<3> Embedded in IDE/editor
+        \end{itemize}
         \column{.4\textwidth}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Debuggers - text based}
+    \begin{columns}
+        \column{.4\textwidth}
+        \begin{itemize}
+            \item \lstinline{pdb}
+            \item \lstinline{ipdb}
+            \item \lstinline{ripdb}
+            \item \lstinline{pdb++}
+            \item \lstinline{pupdb}
+            \item \color{blue}\href{https://wiki.python.org/moin/PythonDebuggingTools}{\uline{others}}
+        \end{itemize}
+        \column{.5\textwidth}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Debuggers - graphical}
+    \begin{columns}
+        \column{.4\textwidth}
+        \begin{itemize}
+            \item Winpdb
+            \item \lstinline{pywin.debugger}
+        \end{itemize}
+        \column{.5\textwidth}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Debuggers - IDE/editors}
+    \begin{columns}
+        \column{.4\textwidth}
+        \begin{itemize}
+            \item PyCharm
+            \item PyDev (Eclipse)
+            \item Wings IDE
+            \item Visual Studio
+            \item \color{blue}\href{https://wiki.python.org/moin/IntegratedDevelopmentEnvironments}{\uline{others!}}
+        \end{itemize}
+        \column{.5\textwidth}
     \end{columns}
 \end{frame}
 
