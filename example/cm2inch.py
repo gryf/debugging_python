@@ -1,5 +1,4 @@
 import Tkinter as tk
-import ttk
 
 
 class CmInchConverter(object):
@@ -17,6 +16,32 @@ class CmInchConverter(object):
         self._gui_initialize()
         self._root.mainloop()
 
+    def calculate(self):
+        """Perform calculation"""
+        action = {1: self._inch_calculate,
+                  2: self._cm_calculate}
+        try:
+            val = int(self.value.get())
+        except ValueError:
+            val = self.value.get()
+
+        result = action[self.convert_to_inches.get()](val)
+        self.result.set(result)
+
+    def _inch_calculate(self, val):
+        """Calculate inch value from given val in cm"""
+        try:
+            return "%.4f" % val * 0.3937
+        except TypeError:
+            return "Err"
+
+    def _cm_calculate(self, val):
+        """Calculate cm value from given val in inch"""
+        try:
+            return "%.4f" % val/0.3937
+        except TypeError:
+            return "Err"
+
     def _gui_initialize(self):
         """Initialize the GUI"""
         self._root = tk.Tk()
@@ -29,7 +54,7 @@ class CmInchConverter(object):
         self.value.set("0")
         self.result.set("0")
 
-        mainframe = ttk.Frame(self._root, padding="3 3 12 12")
+        mainframe = tk.Frame(self._root, pady=5, padx=5)
         mainframe.grid(column=0, row=0, sticky=(tk.N, tk.W, tk.E, tk.S))
         mainframe.columnconfigure(0, weight=1)
         mainframe.rowconfigure(0, weight=1)
@@ -49,47 +74,20 @@ class CmInchConverter(object):
                                 value=2)
         radio2.grid(column=0, row=3, columnspan=2, **defaults)
 
-        ttk.Label(mainframe, text="Enter value:").grid(column=0, row=1,
+        tk.Label(mainframe, text="Enter value:").grid(column=0, row=1,
                                                        **defaults)
-        entry1 = ttk.Entry(mainframe, width=20, textvariable=self.value)
+        entry1 = tk.Entry(mainframe, width=20, textvariable=self.value)
         entry1.grid(column=1, row=1, **defaults)
 
-        ttk.Label(mainframe, text="Result:").grid(column=0, row=4, **defaults)
+        tk.Label(mainframe, text="Result:").grid(column=0, row=4, **defaults)
 
         entry2 = tk.Entry(mainframe, width=20, state=tk.DISABLED,
                           textvariable=self.result,
                           disabledbackground="White Smoke",
                           disabledforeground="Midnight Blue")
         entry2.grid(column=1, row=4, **defaults)
-        ttk.Button(mainframe, text="Calculate",
+        tk.Button(mainframe, text="Calculate",
                    command=self.calculate).grid(column=3, row=5, **defaults)
-
-
-    def calculate(self):
-        """Perform calculation"""
-        action = {1: self._inch_calculate,
-                  2: self._cm_calculate}
-        try:
-            val = int(self.value.get())
-        except ValueError:
-            val = self.value.get()
-
-        result = action[self.convert_to_inches.get()](val)
-        self.result.set(result)
-
-    def _cm_calculate(self, val):
-        """Calculate cm value from given val in inch"""
-        try:
-            return "%.4f" % val/0.3937
-        except TypeError:
-            return "Err"
-
-    def _inch_calculate(self, val):
-        """Calculate inch value from given val in cm"""
-        try:
-            return "%.4f" % val * 0.3937
-        except TypeError:
-            return "Err"
 
 
 def main():

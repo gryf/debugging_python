@@ -72,7 +72,7 @@
 }
 
 \setbeamertemplate{custom section}
-{% 
+{%
     \begin{centering}
         \usebeamerfont{section title}
         \Large\bfseries
@@ -121,18 +121,9 @@
         \end{itemize}
         \column{.4\textwidth}
         \centering
-        \only<1>{\begin{figure}[!htbp]
-                \includegraphics[width=3cm]{"images/find_bug.png"}
-            \end{figure}
-        }
-        \only<2>{\begin{figure}[!htbp]
-                \includegraphics[width=3cm]{images/debugs.png}
-            \end{figure}
-        }
-        \only<3>{\begin{figure}[!htbp]
-                \includegraphics[width=3cm]{images/pdb.png}
-            \end{figure}
-        }
+        \only<1>{\includegraphics[width=3cm]{images/find_bug.png}}
+        \only<2>{\includegraphics[width=3cm]{images/debugs.png}}
+        \only<3>{\includegraphics[width=3cm]{images/pdb.png}}
     \end{columns}
 \end{frame}
 
@@ -142,17 +133,46 @@
 \endgroup
 
 \begin{frame}
-    \begin{itemize}
-        \item{traceback (obviously)}
-        \pause
-        \item \lstinline{print} statement
-        \pause
-        \item module \lstinline{logging}
-        \pause
-        \item module \lstinline{trace}
-        \pause
-        \item debugger
-    \end{itemize}
+    \begin{columns}
+        \column{.5\textwidth}
+        \begin{itemize}[<+->]
+            \item<1,2,3,4,5> traceback (obviously)
+            \item<2,3,4,5> \lstinline{print} statement
+            \item<3,4,5> module \lstinline{logging}
+            \item<4,5> module \lstinline{trace}
+            \item<5> debugger
+        \end{itemize}
+        \column{.4\textwidth}
+        \centering
+        \only<1>{%
+
+            \vspace*{0cm}
+            \hspace*{0cm}\includegraphics[width=5cm]{images/traceback.png}
+
+        }
+        \only<2>{%
+
+            \vspace*{0cm}
+            \hspace*{0cm}\includegraphics[width=5cm]{images/print.png}
+
+        }
+        \only<3>{%
+
+            \vspace*{0cm}
+            \hspace*{0cm}\includegraphics[width=5cm]{images/logging.png}
+
+        }
+        \only<4>{%
+
+            \vspace*{0cm}
+            \hspace*{0cm}\includegraphics[width=5cm]{images/trace.png}
+
+        }
+        \only<5>{%
+            \vspace*{0cm}
+            \hspace*{0cm}\includegraphics[width=5cm]{images/pudb.png}
+        }
+    \end{columns}
 \end{frame}
 
 \begingroup
@@ -166,9 +186,9 @@
     \begin{columns}
         \column{.5\textwidth}
         \begin{itemize}[<+->]
-            \item<1,2,3> Text based 
+            \item<1,2,3> Text based
             \item<2,3> Graphical
-            \item<3> Embedded in IDE/editor
+            \item<3> Embedded in IDE
         \end{itemize}
         \column{.4\textwidth}
     \end{columns}
@@ -181,12 +201,15 @@
         \begin{itemize}
             \item \lstinline{pdb}
             \item \lstinline{ipdb}
-            \item \lstinline{ripdb}
             \item \lstinline{pdb++}
-            \item \lstinline{pupdb}
+            \item \lstinline{pudb}
             \item \color{blue}\href{https://wiki.python.org/moin/PythonDebuggingTools}{\uline{others}}
         \end{itemize}
         \column{.5\textwidth}
+
+        \vspace*{0cm}
+        \hspace*{0cm}\includegraphics[width=5cm]{"images/ipdb.png"}
+
     \end{columns}
 \end{frame}
 
@@ -199,11 +222,15 @@
             \item \lstinline{pywin.debugger}
         \end{itemize}
         \column{.5\textwidth}
+
+        \vspace*{0cm}
+        \hspace*{0cm}\includegraphics[width=5cm]{"images/winpdb.png"}
+
     \end{columns}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Debuggers - IDE/editors}
+    \frametitle{Debuggers - IDE}
     \begin{columns}
         \column{.4\textwidth}
         \begin{itemize}
@@ -214,6 +241,10 @@
             \item \color{blue}\href{https://wiki.python.org/moin/IntegratedDevelopmentEnvironments}{\uline{others!}}
         \end{itemize}
         \column{.5\textwidth}
+
+        \vspace*{0cm}
+        \hspace*{0cm}\includegraphics[width=5cm]{"images/pycharm.png"}
+
     \end{columns}
 \end{frame}
 
@@ -221,6 +252,26 @@
     \setbeamercolor{background canvas}{bg=ExecusharesBlack}
     \section{Python debugger - pdb}
 \endgroup
+
+\begin{frame}
+    \frametitle{cm2inch.py}
+    \begin{itemize}
+        \item Problem: Convert length in centimetre into inch and vice versa
+        \item Solution: Simple TKinter program to do this
+        \pause
+        \item …But it doesn't work :(
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{cm2inch.py - structure}
+    \begin{itemize}
+        \item Single class defined - \lstinline{CmInchConverter}
+        \item Method \lstinline{run} launches the program
+        \item Method \lstinline{_gui_initialze} builds the GUI
+        \item Method \lstinline{calculate} implements the actual calculation logic
+    \end{itemize}
+\end{frame}
 
 \begin{frame}
     \centerline{\Large Let see it in action!}
